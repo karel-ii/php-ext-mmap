@@ -38,6 +38,31 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <cTool>
+          <incDir>
+            <pElem>../php-src-master/TSRM</pElem>
+            <pElem>../php-src-master/Zend</pElem>
+            <pElem>../php-src-master/appveyor</pElem>
+            <pElem>../php-src-master/build</pElem>
+            <pElem>../php-src-master/ext</pElem>
+            <pElem>../php-src-master/pear</pElem>
+            <pElem>../php-src-master/sapi</pElem>
+            <pElem>../php-src-master/scripts</pElem>
+            <pElem>../php-src-master/tests</pElem>
+            <pElem>../php-src-master/travis</pElem>
+            <pElem>../php-src-master/win32</pElem>
+            <pElem>../php-src-master/main/streams</pElem>
+            <pElem>../php-src-master/main</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>../php-src-master/main</pElem>
+          </incDir>
+          <incFile>
+            <pElem>../php-src-master/main/php.h</pElem>
+          </incFile>
+        </ccTool>
       </compileType>
       <item path="LICENSE" ex="false" tool="3" flavor2="0">
       </item>

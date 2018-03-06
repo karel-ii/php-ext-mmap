@@ -65,7 +65,7 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/php-ext-mmap.exe: ${OBJECTFILES}
 ${OBJECTDIR}/mmap.o: mmap.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/mmap.o mmap.c
+	$(COMPILE.c) -g -I../php-src-master/TSRM -I../php-src-master/Zend -I../php-src-master/appveyor -I../php-src-master/build -I../php-src-master/ext -I../php-src-master/pear -I../php-src-master/sapi -I../php-src-master/scripts -I../php-src-master/tests -I../php-src-master/travis -I../php-src-master/win32 -I../php-src-master/main/streams -I../php-src-master/main -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/mmap.o mmap.c
 
 # Subprojects
 .build-subprojects:
