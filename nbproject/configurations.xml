@@ -40,8 +40,8 @@
       <compileType>
         <cTool>
           <incDir>
-            <pElem>../php-src-master/TSRM</pElem>
             <pElem>../php-src-master/Zend</pElem>
+            <pElem>../php-src-master/TSRM</pElem>
             <pElem>../php-src-master/appveyor</pElem>
             <pElem>../php-src-master/build</pElem>
             <pElem>../php-src-master/ext</pElem>
