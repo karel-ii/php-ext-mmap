@@ -48,11 +48,22 @@ php_stream_ops mmap_ops = {
 };
 
 
+/* {{{ ------- MEMORY stream implementation -------*/
+
+typedef struct {
+	char        *data;
+	size_t      fpos;  //stream position
+	size_t      fsize; //stream size
+        size_t      fbase; //stream base address
+	size_t      smax;
+	int         mode;
+} php_stream_mmap_data;
+
 
 size_t mmap_stream_write(php_stream *stream, const char *buffer, size_t length TSRMLS_DC) {
     int to_write;
     struct mmap_stream_data *data = stream->abstract;
-    
+       
     to_write = MIN(data->base_offset + data->length - data->current_offset, length); 
     if(to_write == 0) {
         return 0; 
